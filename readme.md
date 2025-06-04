@@ -86,12 +86,14 @@ Aqui pegamos as posições dos jogadores e vamos ver quantos jogadores existem e
 
 Quantidade de jogadores em cada posição:
 
+```    
     POS	count
 0	SG	141
 1	PF	104
 2	SF	102
 3	PG	98
 4	C	92
+```
 
 Esse foi o resultado mostrado no final, cada posição e quantos jogadores existem em cada uma.
 
@@ -101,6 +103,7 @@ Esse foi o resultado mostrado no final, cada posição e quantos jogadores exist
 
 Novamente utilizando o ".value_counts()", mas, aplicado na coluna "NATIONALITY" 
 
+```
 	NATIONALITY	count
 0	    US US	416
 1	    CA CA	24
@@ -144,6 +147,7 @@ Novamente utilizando o ".value_counts()", mas, aplicado na coluna "NATIONALITY"
 39	    AT AT	1
 40	    LC LC	1
 41	    FI FI	1
+```
 
 Esse foi o resultado mostrado.
 Como mostrado, sabemos que temos um jogador Brasileiro na NBA. Nosso menino Gui Santos tem se mostrado muito bom jogador. Apenas uma curiosidade hehe.
@@ -205,9 +209,7 @@ colegio_frequente
 
 de forma simples, utilizando o .idxmax(), ele retornaria o nome que mais aparece na analise. da mesma forma que usando o .max(), ele mostraria a quantidade de vezes que aparece
 
-### Quantos jogadores são novatos (rookies)?
-
-
+---
 
 ### 🏀 Time com mais jogadores acima de 2 metros
 
@@ -222,6 +224,8 @@ retornando:
 Team      DENVER NUGGETS
 HEIGHT                13
 
+---
+
 ### ⚖️ Média de peso por time
 
 A média de peso por equipe foi calculada assim:
@@ -232,12 +236,16 @@ novo_df.groupby(by=["Team"])["WEIGHT"].mean().sort_values(ascending=False)
 
 Utilizando o groupBy conseguimos chegar a um resultado bem bacana das medias de peso por time. Porém ficou muito grande para colocar aqui, então, aqui vão os 5 primeiros:
 
+```
 Team
 DENVER NUGGETS                      224.722222
 LOS ANGELES LAKERS                  224.705882
 HOUSTON ROCKETS                     220.722222
 PHILADELPHIA WARRIORS               220.000000
 SACRAMENTO KINGS                    218.470588
+```
+
+---
 
 ### 🧩 Qual posição é mais comum em cada time?
 
@@ -248,18 +256,24 @@ novo_df.groupby(by=["Team"])["POS"].value_counts().groupby(level=0).head(1).rese
 ```
 Utilizando dois groupby, conseguimos chegar ao resultado esperado. mas novamente ficou bastante informação, então os 5 primeiros times são: 
 
+```
             Team	    POS	count
 0	ATLANTA HAWKS	    SG	6
 1	BOSTON CELTICS	    C	5
 2	BROOKLYN NETS	    PF	5
 3	CHARLOTTE HORNETS 	SG	8
 4	CHICAGO BULLS	    PG	5
+```
 
 são as posições mais frequentes das 5 primeiras equipes.
+
+---
 
 ## Conclusão
 
 Obrigado por ter chegado até aqui, ainda estou aprendendo, mas sempre procuro fazer algo legal e da melhor forma possivel.
+
+---
 
 ## 🔗 Contato
 
